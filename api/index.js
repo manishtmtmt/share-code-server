@@ -2,8 +2,8 @@ require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 
-const connectDB = require("./config/db");
-const codeRoutes = require("./routes/codeRoute");
+const connectDB = require("../config/db");
+const codeRoutes = require("../routes/codeRoute");
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.use("/", codeRoutes);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, async () => {
   try {
